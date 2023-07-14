@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementByTagName("button");
 
     for (let button of buttons){
-        button.addEventListener("click" , function() {
-            if (this.getAttribute("data.type")=== "submit") {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "submit") {
                 alert("You clicked Submit!");
             } else {
-                let gameType = this.getAttribute("data-type")
-                alert('You clicked ${gameType}');
+                let gameType = this.getAttribute("data-type");
+                alert(`You clicked ${gameType}`);
             }
         })
 
